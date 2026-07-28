@@ -21,8 +21,11 @@ let boolValid = Boolean(isValid)
 
 // console.log(boolValid)
 
-let str = "hora"
+let str = "1+2"
 let boolstr = Boolean(str)
+let num = Number(str)
+console.log(num);
+
 // console.log(boolstr);
 // console.log(typeof boolstr);
 
@@ -38,6 +41,8 @@ let val = 7
 // console.log(2**4);
 // console.log(17%4);
 // console.log(2/3);
+
+
 
 let str1 = "hello"
 let str2 = " Harshit"
