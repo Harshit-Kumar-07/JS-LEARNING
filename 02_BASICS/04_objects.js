@@ -1,11 +1,11 @@
-const instaUser = new Object()
+// const instaUser = new Object()
 
-instaUser.id = "07abc"
-instaUser.name = "hora"
-instaUser.isLoggedIn = false
+// instaUser.id = "07abc"
+// instaUser.name = "hora"
+// instaUser.isLoggedIn = false
 
-console.log(Object.keys(instaUser));
-console.log(Object.values(instaUser));
+// console.log(Object.keys(instaUser));
+// console.log(Object.values(instaUser));
 
 // console.log(instaUser);
 
@@ -30,14 +30,35 @@ console.log(Object.values(instaUser));
 // console.log(merged_obj);
 
 
-const arr =[
-    obj ={
-        email : "hora@com", 
-        name : "hora"
-    },
-    {
+// const arr =[
+//     obj ={
+//         email : "hora@com", 
+//         name : "hora"
+//     },
+//     {
 
-    }
-]
+//     }
+// ]
 
-console.log(arr[0].email);
+// console.log(arr[0].email);
+
+course = {
+    coursename : "js in hindi",
+    courseprice : 999,
+    courseteacher : "hitesh"
+}
+
+// destructuring
+const {courseteacher : teacher} = course
+
+console.log(teacher)
+
+// json format 
+const jsonData = {
+    name : "harshit",
+    age : 18,
+    location : "pantnagar"
+};
+
+
+
