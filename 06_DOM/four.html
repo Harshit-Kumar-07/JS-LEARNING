@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Hora | DOM</title>
+</head>
+<body style=" background-color: black; color : white">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+    <script>
+        function addLanguage(langName){
+            const litem = document.createElement('li');
+            litem.innerHTML = `${langName}`;
+            document.querySelector('.language').appendChild(litem);
+        }
+
+        // calling function to add new language
+        addLanguage("Java")
+        addLanguage("C++")
+
+        function AddLangOptimised(langName){
+            const litem = document.createElement('li');
+            const text = document.createTextNode(langName);
+            litem.appendChild(text);
+            document.querySelector('.language').appendChild(litem);
+        }
+        
+        
+        AddLangOptimised("TypeScript")
+
+        // Edit
+        const third_lang = document.querySelector('li:nth-child(3)');
+        const li = document.createElement('li');
+        li.textContent = "GoLang";
+        third_lang.replaceWith(li);
+
+        // Removing 
+        const last_lang = document.querySelector('li:last-child');
+        last_lang.remove();
+
+
+    </script>
+</html>
