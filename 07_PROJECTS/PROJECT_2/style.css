@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+}
+
+#submit{
+    margin : 20px;
+    width : 10%;
+    height : 5vh;
+    background-color: red;
+    font-size: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#submit:hover{
+    transition: 0.2s;
+    background-color: orange;
+    border : brown 2px solid;
+}
+
+ 
+
