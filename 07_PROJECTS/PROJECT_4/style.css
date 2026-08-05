@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+    font-size : 100px;
+}
+
+#bigdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#input{
+    width : 1000px;
+    height  : 200px;
+    font-size : 100px;
+}
+
+#sbmtbutton{
+    width : 700px;
+    height : 300px;
+    font-size : 100px;
+}
+
+#guesses, #guessesLeft,#pg ,#gl{
+    font-size: 100px;
+}
+
