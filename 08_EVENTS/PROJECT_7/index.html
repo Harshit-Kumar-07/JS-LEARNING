@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KEY</h1>
+    <p id="k"></p>
+    <h1>KEY CODE</h1>
+    <p id="kc"></p>
+</body>
+    <script>
+        window.addEventListener('keydown',function(e){
+            document.getElementById('k').innerHTML = `${e.key}`
+            document.getElementById('kc').innerHTML = `${e.keyCode}`
+        })
+    </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+    <script>
+
+
+        let rand_color = function(){
+            let color = "#";
+            const arr = '0123456789ABCDEF'
+            for(let i = 1;i<=6;i++){
+                color += arr[Math.floor(Math.random()*16)]
+            }
+            
+            return color
+        }
+        //console.log(rand_color())
+
+        let changer
+        let changer2 
+        document.querySelector('#start').addEventListener('click',function(){
+            start.disabled = true;
+            changer = setInterval(function(){
+                document.getElementById('body').style.backgroundColor = rand_color()
+            },1000)
+        })
+
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearInterval(changer)
+            stop.disabled=true
+        })
+    </script>
+</html>

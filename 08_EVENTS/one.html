@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing</title>
+</head>
+<body style="background-color: grey; color : red;">
+
+    <h1>Amazing</h1>
+
+    <ul id="images">
+        <li>
+            <img id="image1" src="https://picsum.photos/200?random=1" alt="Random Image 1" width="200" height="200">
+        </li>
+        <li>
+            <img id="image2" src="https://picsum.photos/200?random=2" alt="Random Image 2" width="200" height="200">
+        </li>
+        <li>
+            <img id="image3" src="https://picsum.photos/200?random=3" alt="Random Image 3" width="200" height="200">
+        </li>
+        <li>
+            <img id="image4" src="https://picsum.photos/200?random=4" alt="Random Image 4" width="200" height="200">
+        </li>
+        <li>
+            <img id="image5" src="https://picsum.photos/200?random=5" alt="Random Image 5" width="200" height="200">
+        </li>
+    </ul>
+
+    <a id="google" href="https://www.google.com" target="_blank">Visit Google</a>
+
+</body>
+
+    <script>
+        // document.getElementById('image2').onclick = function(){
+        //     alert("image 2 is clicked")
+        // }
+
+        // document.getElementById('images').addEventListener('click',function(e){
+        //     console.log(e);            
+        //     alert("clicked inside UL")
+        // },false)
+        // document.getElementById('image2').addEventListener('click',function(e){
+        //     console.log(e);
+        //     e.stopPropagation();// stops bubbling            
+        //     alert("clicked image 2")
+            
+        // },false)
+        // // bubbling in false (bottom to top)
+        // // top to bottom in true
+
+        // // type, timestamp, defaultPrevented
+        // // target, toElement, srcElement, currentTarget,
+        // // clientX, clientY, screenX, screenY
+        // // altKey, ctrlKey, shiftKey, keyCode
+
+        // document.getElementById('google').addEventListener('click',function(e){
+        //     e.preventDefault();// stops from doing something
+        // })
+
+        document.getElementById('images').addEventListener('click',function(e){
+            e.target.remove()
+        })
+
+
+
+
+    </script>
+</html>
