@@ -40,9 +40,10 @@ h1{
     border-radius: 20px;
     color : rgb(27, 168, 27);
     font-size : 90px;
-     display: flex;
+    display: flex;
     align-items: center; 
     justify-content: center;
+    margin : 5px;
 }
 
 #message{

@@ -32,6 +32,8 @@ let player1=true;
             return null;
         }
 
+        
+
         let box = document.getElementById('main_box');
         box.addEventListener('click',function(e){
 
