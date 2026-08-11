@@ -17,3 +17,19 @@ buttons.forEach( function(btn){
         }
     })
 } )
+
+
+// for changing head title
+// Store the original title defined in the HTML
+        const originalTitle = document.title;
+
+        // Listen for visibility changes
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                // Triggered when user leaves the tab
+                document.title = "😱 Come back! We miss you!";
+            } else {
+                // Triggered when user returns to the tab
+                document.title = originalTitle;
+            }
+        });
