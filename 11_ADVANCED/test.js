@@ -1,0 +1,2 @@
+let myarr = []
+%DebugPrint(myarr)
