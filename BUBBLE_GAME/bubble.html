@@ -10,28 +10,33 @@
 </head>
 <body>
     <div id="main">
+        <audio src="click_audio_sound.mp3" id="click_sound" preload="auto"></audio>
+        <audio src="game_over_sound.mp3" id="game_over_sound" preload="auto"></audio>
+
         <div id="panel">
             <div id="top_panel">
 
                 <div class="elem">
                     <h4>HIT</h4>
-                    <div class="box">6</div>
+                    <div id="hitbox" class="box">6</div>
                 </div>
                 <div class="elem">
                     <h4>TIMER</h4>
-                    <div class="box">60</div>
+                    <div id="timer_box" class="box">60</div>
                 </div>
                 <div class="elem">
                     <h4>SCORE</h4>
-                    <div class="box">0</div>
+                    <div id="scorebox" class="box">0</div>
                 </div>
+                <div id="start_btn">START</div>
 
             </div>
 
             <div id="panel_bottom">
-                <div id="bubble">5</div>
+                <div class="bubble">5</div>
             </div>
         </div>
     </div>
 </body>
+    <script src="bubble.js"></script>
 </html>
