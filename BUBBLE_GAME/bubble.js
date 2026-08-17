@@ -39,7 +39,7 @@ function get_new_hit(){
     document.querySelector("#hitbox").textContent = random
 }
 
-let score = 0;
+let score = -1;
 function increase_score(){
     score++;
     document.querySelector("#scorebox").textContent = score
