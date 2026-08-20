@@ -9,8 +9,12 @@ function make_bubble(){
     document.querySelector("#panel_bottom").innerHTML = clutter
 }
 
-function play_click_sound(){
-    let sound = document.getElementById('click_sound')
+function play_correct_click_sound(){
+    let sound = document.getElementById('correct_click_sound')
+    sound.play()
+}
+function play_wrong_click_sound(){
+    let sound = document.getElementById('wrong_click_sound')
     sound.play()
 }
 function play_game_over_sound(){
@@ -24,10 +28,28 @@ function run_timer(){
         timer--;
         if(timer<=0){
             clearInterval(running_time)
-            document.querySelector("#panel_bottom").innerHTML = `GAME OVER  ᡕᠵデᡁ᠊╾━ `
+
+            if(score>highScore){
+                highScore=score
+                localStorage.setItem("highScore",highScore)
+                document.querySelector("#highscorebox").textContent = highScore
+            }
+
+            document.querySelector("#panel_bottom").innerHTML = `
+            <div id="game_over_message">GAME OVER  ᡕᠵデᡁ᠊╾━</div> 
+            <div id="restart_btn">RESTART</div>
+            `
+
             play_game_over_sound()
-            document.getElementById('panel_bottom').style.color = 'green'
-            document.getElementById('panel_bottom').style.fontSize = '70px'
+
+            document.getElementById("restart_btn")
+            .addEventListener('click',function(button){
+                make_bubble()
+                get_new_hit()
+                document.getElementById('timer_box').innerHTML = '60'
+                document.getElementById('scorebox').innerHTML = '0' 
+                score = 0
+            })
         }
         document.querySelector("#timer_box").textContent = timer
     },1000);
@@ -39,23 +61,35 @@ function get_new_hit(){
     document.querySelector("#hitbox").textContent = random
 }
 
-let score = -1;
+let score = 0;
 function increase_score(){
     score++;
+    document.querySelector("#scorebox").textContent = score
+}
+function decrease_score(){
+    if(score>0)score--;
     document.querySelector("#scorebox").textContent = score
 }
 
 
 
 
+let highScore = localStorage.getItem("highScore") || 0
+document.querySelector("#highscorebox").textContent = highScore
+
+
 document.querySelector("#panel_bottom")
 .addEventListener("click",function(destination){
     let clicked_num = Number(destination.target.textContent)    
     if(random==clicked_num){
-        play_click_sound()
+        play_correct_click_sound()
         increase_score()
         make_bubble()
         get_new_hit()
+    }
+    else{
+        play_wrong_click_sound()
+        decrease_score()
     }
 })
 
@@ -63,10 +97,12 @@ document.querySelector("#panel_bottom")
 document.querySelector("#start_btn")
 .addEventListener("click",function(button){
     run_timer()
-    button.target.remove()
+    button.target.disabled = true
 })
+
+
+
 
 make_bubble()
 
 get_new_hit()
-increase_score()

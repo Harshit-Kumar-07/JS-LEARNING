@@ -10,11 +10,17 @@
 </head>
 <body>
     <div id="main">
-        <audio src="click_audio_sound.mp3" id="click_sound" preload="auto"></audio>
+        <audio src="click_audio_sound.mp3" id="correct_click_sound" preload="auto"></audio>
         <audio src="game_over_sound.mp3" id="game_over_sound" preload="auto"></audio>
+        <audio src="wrong_click_effect.mp3" id="wrong_click_sound" preload="auto"></audio>
 
         <div id="panel">
             <div id="top_panel">
+
+                <div class="elem">
+                <h4>HIGH SCORE</h4>
+                <div id="highscorebox" class="box">0</div>
+                </div>
 
                 <div class="elem">
                     <h4>HIT</h4>
@@ -34,6 +40,7 @@
 
             <div id="panel_bottom">
                 <div class="bubble">5</div>
+                
             </div>
         </div>
     </div>

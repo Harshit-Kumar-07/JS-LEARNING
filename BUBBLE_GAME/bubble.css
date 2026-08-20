@@ -30,7 +30,8 @@ html,body{
 #top_panel{
     width : 100%;
     height: 10vh;
-    background-color: rgb(58, 131, 58);
+    background: linear-gradient(225deg, #003716 0.000%, #004d00 25.000%, #007103 50.000%, #00a331 75.000%, #00e07c 100.000%);
+    
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -81,7 +82,7 @@ html,body{
     align-items: center;
     justify-content: center;
 }
-#bubble:hover{
+.bubble:hover{
     background-color: rgb(54, 99, 54);
     cursor: pointer;
 }
@@ -89,10 +90,27 @@ html,body{
 #start_btn{
     width : 20vb;
     height : 5vh;
-    background-color: #60de79;
+    background: linear-gradient(225deg, #003716 0.000%, #004d00 25.000%, #007103 50.000%, #00a331 75.000%, #00e07c 100.000%);
+    color : black;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10vh;
-    border: 8px solid black;
+    border: 3px solid black;
+}
+
+#game_over_message{
+    color : green;
+    font-size: 70px;
+}
+#restart_btn{
+    width : 20vb;
+    height : 5vh;
+    background: linear-gradient(225deg, #003716 0.000%, #004d00 25.000%, #007103 50.000%, #00a331 75.000%, #00e07c 100.000%);
+    color : black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10vh;
+    border: 3px solid black;
 }
