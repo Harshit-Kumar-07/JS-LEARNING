@@ -11,6 +11,7 @@ body{
     width:100vw;
     height:100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -54,4 +55,20 @@ input{
     width:30vb;
     height:30vh;
     margin-bottom: calc(4vh);
+}
+
+#theme{
+    width: 4vw;
+    height: 5vh;
+    border: black calc(0.4vh) solid;
+    border-radius: calc(2vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vh;
+}
+
+#theme img{
+    width: 3vw;
+    height: 4vh;
 }
